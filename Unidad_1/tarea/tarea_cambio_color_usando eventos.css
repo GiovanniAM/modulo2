@@ -1,0 +1,30 @@
+.cuadradoContenedor {
+    width: 20em;
+    height: 10em;
+    background-color: cadetblue;
+}
+
+div.cuadrado {
+    width: 5em;
+    height: 5em;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.cuadrado {
+    color: bisque;
+}
+
+.violeta {
+    background-color: violet;
+}
+
+.naranja {
+    background-color:orange;
+}
+
+.gris {
+    background-color:grey;
+}

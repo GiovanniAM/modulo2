@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambio fondo con eventos</title>
+    <link rel="stylesheet" href="tarea_cambio_color_usando eventos.css">
+</head>
+<body>
+    <h2>Soy un subtitulo</h2>
+    <div class="cuadradoContenedor">
+        <div class="cuadrado violeta">Violeta</div>
+        <div class="cuadrado naranja">Naranja</div>
+        <div class="cuadrado gris">Gris</div>
+    </div>
+
+    <script>
+        
+        const fondo = document.querySelector('body');
+
+        const cirVioleta = document.querySelector('.violeta');
+        const cirNaranja = document.querySelector('.naranja');
+        const cirGris = document.querySelector('.gris');
+
+        cirVioleta.addEventListener('click', function (e){
+            console.log(e.target.textContent);
+            fondo.style.background = 'violet';
+            
+        })
+        cirNaranja.addEventListener('click', function (){
+            fondo.style.background = 'orange';
+        })
+        cirGris.addEventListener('click', function (){
+            fondo.style.background = 'grey';
+        })
+
+        
+        function cambiarFondo(color){
+            const fondo = document.querySelector('body');
+            fondo.style.background = color;
+
+        }
+
+        
+
+    
+    </script>
+    
+</body>
+</html>

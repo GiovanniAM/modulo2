@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contar caracteres</title>
+</head>
+<body>
+    <div class = cajaComentario>
+        <h3>Escribe tu comentario</h3>
+        <textarea name="comentario" id="comentario" cols="30" rows="10"></textarea>
+        <button>Contar caracteres</button>
+    </div>
+    
+    <script>
+
+        const comentario = document.querySelector('textarea');
+        const boton = document.querySelector('button');
+
+
+
+        boton.addEventListener ('click', function (){
+
+            
+            console.log('Cantidad caracteres ingresados: ' + comentario.value.length);
+
+            
+        })
+        
+
+    </script>
+</body>
+</html>

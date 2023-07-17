@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contar letras</title>
+</head>
+<body>
+    <div class = cajaComentario>
+        <h3>Escribe tu comentario</h3>
+        <textarea name="comentario" id="comentario" cols="30" rows="10"></textarea>
+        <br>
+        <button>Contar letras</button>
+        <br>
+        <p></p>
+    </div>
+    
+    <script>
+
+        const cajaComentario = document.querySelector('textarea');
+        const boton = document.querySelector('button');
+        const resultado = document.querySelector('p');
+
+
+        function contarCantidadLetrasUsandoArray(){
+            let comentarioComoArray = cajaComentario.value.split('');
+            let comentarioFiltrado = comentarioComoArray.filter(letra => letra !== ' ');
+            
+            return comentarioFiltrado.length;
+            
+        }
+
+        boton.addEventListener('click', function() {
+            resultado.textContent = 'La cantidad de letras es: ' + contarCantidadLetrasUsandoArray();
+        })
+
+        //igual a como pasa con la solucion IF, sigue contando otro monton de caracteres que no son letras.
+        //quizá se podría hacer un array con las letras y caracteres que usarías en un comentario. después
+        //con un metodo includes verificar si la tecla pulsada se encuentra en el array(...) 
+
+    </script>
+</body>
+</html>
